@@ -185,7 +185,7 @@ h2 em { font-style: italic; font-weight: 400; }
 }
 .logo-sm       { width: 40px; height: 40px; padding: 6px; border: 1.5px solid rgba(250,247,242,.3); }
 .logo-sm:hover { transform: scale(1.07) rotate(-3deg); }
-.logo-hero     { width: 96px; height: 96px; padding: 14px; }
+.logo-hero     { width: 180px; height: 180px; padding: 18px; }
 .logo-footer   { width: 52px; height: 52px; padding: 8px; background: var(--toffee); }
 /* On scrolled header (light bg) — show logo dark */
 #site-header.scrolled .logo-sm .logo-img { filter: invert(0); }
