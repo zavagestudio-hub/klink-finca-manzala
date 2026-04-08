@@ -548,6 +548,49 @@ h2 em { font-style: italic; font-weight: 400; }
   animation: scrollLine 2.4s ease-in-out infinite;
 }
 
+/* ── PHOTO STRIP ───────────────────────────────────────────── */
+.photo-strip {
+  width: 100%;
+  overflow: hidden;
+  background: var(--text-dark);
+}
+.photo-strip-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+}
+.photo-strip-track:active { cursor: grabbing; }
+.photo-strip-track::-webkit-scrollbar { display: none; }
+.photo-strip-item {
+  flex: 0 0 80vw;
+  max-width: 440px;
+  height: 260px;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+.photo-strip-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s var(--ease);
+}
+.photo-strip-item:hover img { transform: scale(1.04); }
+
+@media (min-width: 900px) {
+  .photo-strip-item {
+    flex: 1 0 0;
+    max-width: none;
+    height: 340px;
+  }
+  /* On desktop show all 4 at once — no scroll needed */
+  .photo-strip-track { overflow: visible; cursor: default; }
+  .photo-strip-track:active { cursor: default; }
+}
+
 /* ── GALLERY ───────────────────────────────────────────────── */
 .gallery-grid {
   display: grid;
