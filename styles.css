@@ -560,8 +560,16 @@ h2 em { font-style: italic; font-weight: 400; }
   cursor: zoom-in;
   min-height: 140px;
 }
-.gallery-item .ph { transition: transform .5s var(--ease); }
-.gallery-item:hover .ph { transform: scale(1.055); }
+.gallery-item .ph,
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s var(--ease);
+}
+.gallery-item:hover .ph,
+.gallery-item:hover img { transform: scale(1.055); }
 
 @media (min-width: 900px) {
   .gallery-grid {
