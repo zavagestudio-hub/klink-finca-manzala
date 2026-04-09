@@ -183,8 +183,8 @@ h2 em { font-style: italic; font-weight: 400; }
 .logo-sm       { height: 38px; width: auto; }
 .logo-sm .logo-img { height: 38px; width: auto; }
 .logo-sm:hover { transform: scale(1.07); }
-.logo-hero     { height: 300px; width: auto; }
-.logo-hero .logo-img { height: 300px; width: auto; }
+.logo-hero     { height: 380px; width: auto; }
+.logo-hero .logo-img { height: 380px; width: auto; }
 .logo-footer   { height: 52px; width: auto; }
 .logo-footer .logo-img { height: 52px; width: auto; }
 /* Scrolled header — logo oscuro sobre fondo claro */
