@@ -167,29 +167,27 @@ h2 em { font-style: italic; font-weight: 400; }
 
 /* ── LOGO ──────────────────────────────────────────────────── */
 .logo {
-  border-radius: 50%;
-  background: var(--text-dark);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   transition: transform .4s var(--spring);
+  background: none;
 }
 .logo-img {
-  width: 100%;
-  height: 100%;
   object-fit: contain;
   display: block;
-  /* SVG is black — invert to white on dark backgrounds */
-  filter: invert(1);
+  filter: invert(1); /* SVG negro → blanco */
 }
-.logo-sm       { width: 40px; height: 40px; padding: 6px; border: 1.5px solid rgba(250,247,242,.3); }
-.logo-sm:hover { transform: scale(1.07) rotate(-3deg); }
-.logo-hero     { width: 180px; height: 180px; padding: 18px; }
-.logo-footer   { width: 52px; height: 52px; padding: 8px; background: var(--toffee); }
-/* On scrolled header (light bg) — show logo dark */
+.logo-sm       { height: 38px; width: auto; }
+.logo-sm .logo-img { height: 38px; width: auto; }
+.logo-sm:hover { transform: scale(1.07); }
+.logo-hero     { height: 200px; width: auto; }
+.logo-hero .logo-img { height: 200px; width: auto; }
+.logo-footer   { height: 52px; width: auto; }
+.logo-footer .logo-img { height: 52px; width: auto; }
+/* Scrolled header — logo oscuro sobre fondo claro */
 #site-header.scrolled .logo-sm .logo-img { filter: invert(0); }
-#site-header.scrolled .logo-sm { border-color: rgba(44,36,22,.15); }
 
 /* ── BUTTONS ───────────────────────────────────────────────── */
 .btn {
